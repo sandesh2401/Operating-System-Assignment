@@ -1,0 +1,130 @@
+// a
+sandesh_kankriya@SANDESH:~/os$ head -10 a.txt
+a
+b
+c
+d
+e
+f
+g
+h
+i
+j
+
+
+// b
+sandesh_kankriya@SANDESH:~/os$ tail -5 a.txt
+u
+v
+x
+y
+z
+
+
+// c
+sandesh_kankriya@SANDESH:~/os$ head -n 15 number.txt
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+// d
+sandesh_kankriya@SANDESH:~/os$ tail -3 number.txt
+18
+19
+20
+
+// e
+sandesh_kankriya@SANDESH:~/os$ cat a.txt | tr [a-z] [A-Z]
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+X
+Y
+Z
+
+sandesh_kankriya@SANDESH:~/os$ tr 'a-z' 'A-Z' < input.txt > output.txt
+
+
+// f
+sandesh_kankriya@SANDESH:~/os$ cat > duplicate.txt
+a
+b
+c
+d
+e
+e
+b
+z
+f
+e
+b
+f
+h
+g
+h
+sandesh_kankriya@SANDESH:~/os$ sort duplicate.txt
+a
+b
+b
+b
+c
+d
+e
+e
+e
+f
+f
+g
+h
+h
+z
+
+sandesh_kankriya@SANDESH:~/os$ sort -u duplicate.txt
+a
+b
+c
+d
+e
+f
+g
+h
+z
+
+// g
+sandesh_kankriya@SANDESH:~/os$ sort fruit.txt | uniq -c
+      3 apple
+      1 greapes
+      1 guava
+      2 mango
+      1 watermelon
