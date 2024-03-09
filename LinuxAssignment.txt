@@ -1,0 +1,68 @@
+//Created LinuxAssignment : 
+sandesh_kankriya@SANDESH:/home$ cd sandesh_kankriya/
+sandesh_kankriya@SANDESH:~$ mkdir LinuxAssignment
+
+
+//created file1.txt in linuxAssignment directory :
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ ls
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ cat > file1.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ ls
+file1.txt
+
+
+//created docs directory in LinuxAssignment :
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ mkdir docs
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ ls
+docs  file1.txt
+
+
+//copy file1.txt into file2.txt in docs directory
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ cp file1.txt docs/file2.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ ls
+docs  file2.txt
+
+//list file2.txt 
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ ls
+file2.txt
+
+// permissions and ownership
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ chmod 744 file2.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ ls -l
+-rwx---r-- 1 sandesh_kankriya sandesh_kankriya 0 Mar  7 17:52 file2.txt
+
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ chown sandesh_kankriya file2.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ ls -l
+total 4
+-rwx---r-- 1 sandesh_kankriya sandesh_kankriya 5 Mar  7 18:18 file2.txt
+
+
+// display date and time
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ date
+Thu Mar  7 18:43:44 IST 2024
+
+
+//File Searching:
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ find . -name "*.txt"
+./file1.txt
+./docs/file2.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ grep "Sandesh" file1.txt
+Hello My Name is Sandesh
+
+
+//File Compression:
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ mv file.zip docs2/
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ cd docs
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs$ cd ..
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ cd docs2
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs2$ ls
+file.zip
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs2$ unzip file.zip
+Archive:  file.zip
+   creating: docs/
+sandesh_kankriya@SANDESH:~/LinuxAssignment/docs2$ ls
+docs  file.zip
+
+//File Editing:
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ sed -i 's/Sandesh/sk/g' file1.txt
+sandesh_kankriya@SANDESH:~/LinuxAssignment$ cat file1.txt
+Hello My Name is sksandesh_kankriya@SANDESH:~/LinuxAssignment$
